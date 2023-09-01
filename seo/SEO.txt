@@ -1,0 +1,35 @@
+1 - Créer du bon contenu
+        - 400 mots par page min
+        - garder un contenu à jour
+        - ne pas répéter toujours les mêmes choses
+        - ne pas faire une page d'intro avant le site
+        - pas de lien 'cliquez içi', 'en savoir plus'
+        - penser à être local (préciser ville, quartier, région), le robot privilégie les choses locales. Mettre .fr si votre site n'est destiné qu'à la France
+
+2 - HTML "seo friendly"
+        - 'title' et 'meta' apparaissent dans le résultat de recherche Google
+        - penser à changer la langue : <html lang="fr">
+        - la balise 'title' supporte jusqu'à 70 caractères, elle jour un rôle dans le référencement
+        - Open Graph : sert à être plus visible sur les réseaux
+        https://ogp.me/
+        <meta property="og:title" content="The Rock" />
+        <meta property="og:type" content="video.movie" />
+        <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+        <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" /> ...
+        - balises 'meta'
+            - <meta name="description" content="description de ce que fait le site web, avec des mots-clés, précis..."> // aide à référencer
+        - le 'h1' doit être le plus haut possible et dire de quoi on parle, la chose la plus importante
+        - sous-titre évocateurs
+        - Google aime bien les balises 'strong' et 'em'
+        - 'p' aide le robot à comprendre le contenu
+        - 'alt' de la balise 'img' sert au référencement, à l'accessibilité du site
+        - l'image doit être optimisée dans sa taille et son format, elle ne doit pas dépasser de son contenant
+
+3 - Site rapide et performant
+        - le robot teste le temps de chargement
+        - il faut que le JS soit lu en dernier (car c'est le truc le plus complexe et le plus long à lire sur la page)
+        - il faut faire apparaître le plus vite possible une couleur de fond (différent de blanc)
+        - privilégier les images depuis le CSS (et non pas la balise 'img'), car elles se chargent plus vite, les mettre au format Wep
+
+Tester son SEO : plugin 'Lighthouse'
+Doc SEO : https://developers.google.com/search/docs?hl=fre

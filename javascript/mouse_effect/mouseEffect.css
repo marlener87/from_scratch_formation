@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    background: #201F20;
+    font-family: 'Inter', sans-serif;
+    padding: 0 100px;
+    color: white;
+    cursor: none;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    
+}
+ul > li {
+    list-style-type: none;
+    z-index: 10;
+}
+
+a, a:visited {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+a:hover {
+    font-size: 1.3rem;
+    color: #2128bd;
+    font-weight: bold;
+}
+
+/* SECTION */
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-left {
+    width: 50%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.header-left h3 {
+    color: #474dff;
+    font-size: 30px;
+}
+
+.header-right {
+    width: 50%;
+    padding: 30px;
+}
+
+#modem {
+    width: 100%;
+    height: 100%;
+}
+
+/* FOOTER */
+.infos {
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.infos-left {
+    padding: 0 20px;
+    width: 30%;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 45%;
+    max-width: 60%;
+}
+
+button {
+    background: #494CFF;
+    color: white;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.infos-right {
+    width: 70%;
+}
+
+.investors {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.img-investors {
+    width: 100px;
+}
+
+/**************************** MEDIA QUERIES ************************************/
+/* VERSION TABLETTE */
+@media screen and (max-width: 900px) {
+    body {
+        padding: 0 50px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+
+    .header-left h3 {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+
+    p {
+        font-size: 10px;
+    }
+    
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        min-width: 50%;
+        max-width: 80%;
+    }
+
+    .infos h3 {
+        margin: 10px 0;
+    }
+
+    button {
+        margin: 5px;
+    }
+
+    .img-investors {
+        width: 80px;
+    }
+}
+
+
+
+
+/* VERSION SMARTPHONE */
+@media screen and (max-width: 430px) {
+    body {
+        padding: 0 10px;
+        width: auto;
+    }
+
+    .header {
+        display: block;
+    }
+    
+    .header-left {
+        margin: 0;
+        display: block;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .header-left h3 {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    .header-right {
+        width: 100%;
+        padding: 0;
+        margin: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #modem {
+        width: 70%;
+    }
+
+    .infos {
+        display: block;
+        padding: 10px;
+        width: auto;
+    }
+
+    .infos-left {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .infos-right {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .investors {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+
+/* mousemove effect */
+.mousemove {
+    height: 7px;
+    width: 7px;
+    /* border: 2px solid #494CFF; */
+    background: #494CFF;
+    position: absolute;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    /*transition: 0.3s ease;*/
+    z-index: 4;
+    mix-blend-mode: difference;
+}
+
+.mousemovepoursuite {
+    height: 80px;
+    width: 80px;
+    background: rgb(255 255 255 / 78%);
+    position: absolute;
+    border-radius: 100px;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-out;
+    z-index: 3;
+    mix-blend-mode: difference;
+}
+
+.mousemovepoursuite2 {
+    height: 150px;
+    width: 150px;
+    background: rgb(41, 41, 41);
+    position: absolute;
+    border-radius: 100px;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-out;
+    z-index: 2;
+    mix-blend-mode: difference;
+}

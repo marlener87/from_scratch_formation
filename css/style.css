@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:wght@300;400;700&display=swap');
+
+body {
+    background: url(assets/img/paon.jpg) center/cover;
+    min-height: 100vh; /* vh (viewport height = 100% de la taille de l'écran */
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    /* les tailles de polices doivent être en REM. 1rem = 16px. Ca s'adapte mieux à tous les écrans, aux personnes qui ont des difficultés à voir */
+    /* font-size: 2.5rem; */
+    font-size: 8vw; /* viewport width */
+    text-shadow: -20px 16px 7px #0000004f;
+    color: teal;
+    /* text-decoration: underline; */
+    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Raleway', sans-serif; */
+}
+
+main {
+    min-height: 500px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.568);
+    /* centrer une boîte */
+    margin: 0 auto;
+    border: 2px solid blue;
+    border-radius: 20px 10px 50px 150px;
+    box-shadow: 0 0 13px 3px teal;
+    padding: 15px;
+}
+
+h2 {
+    margin: 0;
+}
+
+/* FLEXBOX */
+.flexbox, .grid, .absolute {
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 150px;
+}
+
+.flexbox ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexbox li {
+    list-style: none;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background: turquoise;
+    /* centrer un unique élément verticalement et horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GRID */
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.grid img {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-areas: 
+        "i1 i2"
+        "ta ta"
+        "vi bt";
+}
+
+input, textarea {
+    margin: 5px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: 'DMSerif';
+    border-radius: 5px;
+}
+
+textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+#btn-submit {
+    grid-area: bt;
+    cursor: pointer;
+    background: cyan;
+    transition: 0.2s;
+}
+
+#btn-submit:hover {
+    background: darkblue;
+    color: white;
+}
+
+/* POSITION ABSOLUTE */
+/* Il faut mettre une position relative au parent pour contraindre l'élément en absolute dans ses frontières, sinon il se met en absolute vis-à-vis du body */
+.absolute {
+    position: relative;
+}
+#circle1 {
+    height: 80px;
+    width: 80px;
+    background: skyblue;
+    position: absolute;
+    border-radius: 150px;
+    top: 0;
+    right: 0;
+}
+
+#circle2 {
+    height: 40px;
+    width: 40px;
+    border-radius: 150px;
+    background: teal;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    .grid-container {
+        display: block;
+    }
+
+    .grid-container img {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .flexbox ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "i1"
+            "i2"
+            "ta"
+            "bt";
+    }
+
+    input, textarea {
+        font-size: 0.8rem;
+    }
+}

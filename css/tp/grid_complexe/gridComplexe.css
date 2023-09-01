@@ -1,0 +1,36 @@
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "y1 y1 p1"
+        "r1 g1 p1"
+        "r1 o1 o1";
+    gap: 10px;
+}
+
+div:nth-child(1) {
+    background: yellow;
+    grid-area: y1;
+}
+
+div:nth-child(2) {
+    background: purple;
+    grid-area: p1;
+}
+
+div:nth-child(3) {
+    background: green;
+    grid-area: g1;
+}
+
+div:nth-child(4) {
+    background: red;
+    grid-area: r1;
+}
+
+div:nth-child(5) {
+    background: orchid;
+    grid-area: o1;
+}

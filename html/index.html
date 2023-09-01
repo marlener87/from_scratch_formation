@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le titre de la page -->
+    <title>Cours HTML</title>
+    <!-- Icône de l'onglet -->
+    <link rel="shortcut icon" href="logo_html.png">
+</head>
+<body>
+    <header>
+        <div>
+            <!-- un seul h1 par page -->
+            <h1>Texte - Titre H1</h1>
+            <p>Texte basique. <em>Voici un texte en italique.</em> <strong>Et un texte en gras.</strong> <span>L'élément en span ne revient pas à la ligne.</span></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non amet perferendis nemo quisquam vel rem, dolorem beatae quos, aperiam sapiente voluptate rerum pariatur. Dolor labore unde quas voluptates dolore iure?</p>
+        </div>
+    </header>
+    <!-- les sections servent à matérialiser les grosses parties -->
+    <section>
+        <!-- pour matérialiser les plus petites parties dans les sections, on met des 'div' (mais on peut les mettre partout dans le code) -->
+        <div>
+            <h2>Photo - Titre H2</h2>
+            <img src="pearl.jpg" alt="Pearl dans jardin" height="500">
+        </div>
+        <div>
+            <h3>Liste - Titre H3</h3>
+            <ul>
+                <li>UL = unordered list</li>
+                <li>UL = unordered list</li>
+                <li>UL = unordered list</li>
+            </ul>
+            <ol>
+                <li>OL = ordered list</li>
+                <li>OL = ordered list</li>
+                <li>OL = ordered list</li>
+            </ol>
+        </div>
+        <div>
+            <h4>Raccourci - Titre H4</h4>
+            <p>maj+alt+flèche bas = duplique la ligne et la met en dessous</p>
+            <p>ctrl+k+c = pour commenter</p>
+            <p>ctrl+/ = pour commenter (en JS et CSS)</p>
+            <p>ctrl+k+u = pour décommenter</p>
+        </div>
+        <div>
+            <h5>Tableau - Titre - H5</h5>
+            <table width="50%" border="1">
+                <!-- Légende-->
+                <caption>Populations d'Europe</caption>
+                <!-- En-tête -->
+                <thead>
+                    <tr>
+                        <th>Pays</th>
+                        <th>Population</th>
+                    </tr>
+                </thead>
+                <!-- Corps du tableau -->
+                <tbody>
+                    <tr>
+                        <td>France</td>
+                        <td>66M</td>
+                    </tr>
+                    <tr>
+                        <td>Allemagne</td>
+                        <td>82M</td>
+                    </tr>
+                    <tr>
+                        <td>Espagne</td>
+                        <td>45M</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h6>Lien cliquable vers un autre site - Titre H6</h6>
+            <a href="https://htmlcheatsheet.com/" target="_blank">HTML Cheat Sheet</a> <br>
+            <a href="https://www.toptal.com/designers/htmlarrows/symbols/" target="_blank">Icônes en HTML</a>
+        </div>
+        <div>
+            <h6>Intégrer une vidéo - Titre 6</h6>
+            <video src="video_mer.mp4" autoplay muted loop height="500px"></video>
+        </div>
+    </section>
+
+    <!-- Formulaire -->
+    <section>
+        <h2>Formulaire</h2>
+        <form action="/action.php" method="post">
+            <label for="name">Nom </label>
+            <input type="text" placeholder="Entrez votre nom" id="name">
+            <br>
+            <label for="age">Age</label>
+            <input type="number" id="age" min="0" max="99" step="2" value="18">
+            <br>
+
+            <!-- input select -->
+            <label for="gender">Genre</label>
+            <select id="gender">
+                <option value="homme">Homme</option>
+                <option value="femme" selected>Femme</option>
+            </select>
+
+            <!-- input radio -->
+            <div>
+                <input type="radio" name="type" id="human">
+                <label for="human">Humain</label>
+                <input type="radio" name="type" id="dog" checked>
+                <label for="dog">Chien</label>
+                <input type="radio" name="type" id="rabbit">
+                <label for="rabbit">Lapin</label>
+            </div>
+
+            <!-- textarea -->
+            <textarea cols="30" rows="10" placeholder="Entrez votre demande"></textarea>
+            <br>
+
+            <!-- input checkbox -->
+            <label for="cgv"><input type="checkbox" id="cgv">Accepter les CGV</label>
+            <br>
+            <input type="submit" value="Valider">
+
+            <!-- mail et envoi de fichier-->
+            <footer>
+                <a href="mailto:xxx@gmail.com">Ecrivez moi</a>
+                <br>
+                <a href="notice.txt" download="notice">Télécharger la notice</a>
+            </footer>
+        </form>
+    </section>
+</body> 
+</html>
