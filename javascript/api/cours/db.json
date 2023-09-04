@@ -14,6 +14,24 @@
       "pseudo": "From Scratch",
       "message": "Yo les gens !",
       "id": 4
+    },
+    {
+      "pseudo": "From Scratch",
+      "message": "Yo les gens !",
+      "id": 5
+    },
+    {
+      "pseudo": "From Scratch",
+      "message": "Yo les gens !",
+      "id": 6
+    }
+  ],
+  "users": [
+    {
+      "pseudo": "From Scratch",
+      "message": "Yo les gens !",
+      "age": 36,
+      "id": 1
     }
   ]
 }
