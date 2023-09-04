@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "pseudo": "From Scratch",
+      "message": "Yo les gens !",
+      "id": 1
+    },
+    {
+      "pseudo": "From Scratch",
+      "message": "Yo les gens !",
+      "id": 3
+    },
+    {
+      "pseudo": "From Scratch",
+      "message": "Yo les gens !",
+      "id": 4
+    }
+  ]
+}

@@ -13,11 +13,9 @@ function getJoke() {
     //.then((data) => console.log(data.data.content.text_head));
     //.then((data) => (document.body.textContent = data.data.content.text_head));
     .then((data) => {
-      header.textContent = data.data.content.text_head;
-      content.textContent =
-        data.data.content.text !== ""
-          ? data.data.content.text
-          : data.data.content.text_hidden;
+      const joke = data.data.content;
+      header.textContent = joke.text_head;
+      content.textContent = joke.text !== "" ? joke.text : joke.text_hidden;
     });
 }
 

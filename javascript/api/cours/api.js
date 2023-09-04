@@ -38,3 +38,52 @@ fetch("data.txt") // pour aller chercher un fichier .txt
 fetch("data.json") // pour aller chercher un fichier .json
   .then((res) => res.json())
   .then((data) => console.log(data));
+
+const myHeaders = new Headers();
+const init = {
+  method: "GET", // apporte-moi des données
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
+//fetch("http://facebook.com").then((res) => console.log(res));
+//fetch("data.json", init).then((res) => console.log(res));
+
+// CRUD => Create (POST), Read (GET), Update (PUT), Delete (DELETE)
+
+const init2 = {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    pseudo: "From Scratch",
+    message: "Yo les gens !",
+  }),
+  mode: "cors",
+  credentials: "same-origin",
+};
+
+const init3 = {
+  method: "DELETE",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  mode: "cors",
+  credentials: "same-origin",
+};
+
+document.querySelector("form").addEventListener("submit", () => {
+  fetch("http://localhost:3000/posts", init2).then(() =>
+    console.log("data envoyée")
+  );
+});
+
+document.querySelector("form").addEventListener("submit", () => {
+  fetch("http://localhost:3000/posts/2", init3).then(() =>
+    console.log("data envoyée")
+  );
+});
+
+//---------------------------------
+// Les principales façons d'être asynchrone en JS
