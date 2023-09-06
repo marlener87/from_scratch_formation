@@ -124,3 +124,6 @@ const fetchData2 = async () => {
   // il peut y avoir une série de await
   executeFonction();
 };
+
+//---------------------
+// LE JSON
