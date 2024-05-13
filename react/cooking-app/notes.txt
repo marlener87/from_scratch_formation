@@ -1,0 +1,20 @@
+Test l'API dans l'URL : https://www.themealdb.com/api/json/v1/1/search.php?s=tomato + variableStockée
+
+Aller chercher les données avec 'axios'
+
+Stocker ces données dans le State (useState)
+
+Afficher ces données avec un '.map', mettre la logique des cartes dans un composant 'Card.js'
+
+BONUS
+Recherche ce qui est tapé dans l'input
+
+on démarre le projet dans le terminal en se mettant dans le dossier parent et on tape 'npx create-react-app cooking-app' et tout s'installe
+on supprime ce dont on n'a pas besoin
+'App.js' sera le fichier de base, on efface tout et on tape 'rsc' + tab, et ça initialise le début du code
+on écrit rapidement le début du code, on ne fait pas de CSS pour l'instant
+
+on ouvre un autre terminal, on se met dans le dossier à l'aide de 'cd' et on tape 'npm i axios'
+on vérifie dans 'package.json' que la librairie est bien présente
+
+dans la const App, on fait le useEffect qui va aller chercher les données (c'est comme le fetch en JS)
