@@ -1,0 +1,15 @@
+// VARIABLES
+$color1: pink;
+$color2: teal;
+$white: rgb(241, 241, 241);
+
+// MIXINS
+@mixin centerChild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: $color1;
+}

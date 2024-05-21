@@ -1,0 +1,14 @@
+// index.scss rassemble tous les fichiers SASS
+@import "./settings";
+
+@import "./layout/navbar";
+@import "./layout/header";
+@import "./layout/section";
+@import "./layout/footer";
+
+@import "./components/buttons";
+@import "./components/carousel";
+@import "./components/form";
+
+@import "./pages/about";
+@import "./pages/home";
